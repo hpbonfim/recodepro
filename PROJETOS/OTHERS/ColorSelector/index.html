@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>Paleta de cores</title>
+
+    <script>
+        /* ATIVA O SCRIPT AO CARREGAR A PÁGINA*/
+        window.onload = function () {
+            var corSelecionada = document.getElementById("color");
+
+            /*ADICIONA UM EVENTO DO JAVASCRIPT PARA MONITORAR O INPUT*/
+            corSelecionada.addEventListener("input", function () {
+                document.getElementById("cor").innerHTML = corSelecionada.value; // ALTERA O VALOR DA COR 
+                document.getElementById("titulo").style.color = corSelecionada.value //  ALTERA A COR DO TÍTULO (H1)
+                document.getElementById("escolhido").style.backgroundColor = corSelecionada.value // DEFINE A COR DA FAIXA (BACKGROUND-COLOR)
+            }, false);
+        }
+    </script>
+
+    <style>
+        .paleta {
+            width: 100px;
+            height: 100px;
+        }
+
+        h1 {
+            font-size: 50px;
+            -webkit-text-stroke-width: 1px;
+            /* LARGURA DA BORDA DO TEXTO */
+            -webkit-text-stroke-color: black;
+            /* COR DA BORDA DO TEXTO */
+        }
+    </style>
+</head>
+
+<body style="text-align: center;">
+    <div id="escolhido" style="width: 100%; height: 100px;">&nbsp;</div>
+
+    <h1 id="titulo">Seletor de cores</h1>
+
+    <h1 id="cor">#000000</h1>
+
+    <input type="color" name="color" id="color" value="#000000" class="paleta">
+</body>
+
+</html>

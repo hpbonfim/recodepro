@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Tamanho da imagem</title>
+
+    <script>
+        /* ATIVA O SCRIPT AO CARREGAR A PÁGINA*/
+        window.onload = function () {
+            var tamanho = document.getElementById("tamanho");
+            var imprimir_tamanho = document.getElementById("imprimir_tamanho");
+            var tamanho_imagem = document.getElementById("imagem");
+
+            /*ADICIONA UM EVENTO DO JAVASCRIPT PARA MONITORAR O INPUT*/
+            tamanho.addEventListener("input", function () {
+
+                tamanho_imagem.style.width = tamanho.value + "%"; /* DEFINE A LARGURA DA IMAGEM */
+                tamanho_imagem.style.height = tamanho.value + "%"; /* DEFINE A ALTURA DA IMAGEM */
+
+                imprimir_tamanho.innerHTML = tamanho.value + "%"; /* ESCREVE NA TELA O NOVO VALO */
+            }, false);
+        }
+    </script>
+
+    <style>
+        body {
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Tamanho da imagem</h1>
+
+    0%<input id="tamanho" type="range" min="0" max="200" value="100" />200%
+
+    <p id="imprimir_tamanho">100%</p>
+
+    <img src="https://ead.recode.org.br/pluginfile.php/1/theme_eguru/logo/1599242617/logorecodepro.png" alt="logo"
+        id="imagem">
+
+</body>
+
+</html>

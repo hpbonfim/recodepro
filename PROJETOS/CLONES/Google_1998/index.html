@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Google de 1998</title>
+</head>
+
+<body>
+    <!-- LOGO DO GOOGLE -->
+    <header>
+        <img src="http://img2.wikia.nocookie.net/__cb20130928005319/logopedia/images/0/07/Google1998.jpg"
+            alt="Logo google" class="logo-google">
+    </header>
+    <!-- FIM LOGO DO GOOGLE -->
+
+    <!-- ÁREA DE PESQUISA -->
+    <div class="container">
+        <div class="card">
+            <div class="pesquisa">
+                <span>Procure na web usando a google!</span>
+                <input type="search" id="procurar">
+            </div>
+        </div>
+        <div class="botoes">
+            <select name="resultados" id="resultados" disabled>
+                <option value="10">10 resultados</option>
+                <option value="20">20 resultados</option>
+                <option value="50">50 resultados</option>
+                <option value="100">100 resultados</option>
+            </select>
+            <button onclick="fazerPesquisa()">Google Search</button>
+            <button onclick="estouComSorte()">Estou com sorte</button>
+        </div>
+        <span>
+            <em>Busque mais de 25 milhões de páginas indexadas (em breve será bem maior)</em>
+        </span>
+    </div>
+    <!-- FIM ÁREA DE PESQUISA -->
+
+    <!-- ÁREA SOBRE-->
+    <section class="sobre">
+        <strong>
+            <a id="google" href="www.google.com.br" target="_blank" class="google">About Google!</a>
+        </strong>
+        <br>
+        <br>
+        <a id="stanford" href="www.stanford.com" target="_blank">Stanford Search</a>
+        <a id="linux" href="www.linux.com" target="_blank">Linux Search</a>
+    </section>
+    <!-- FIM DA ÁREA SOBRE-->
+
+    <!-- ÁREA FOOTER-->
+    <footer>
+        <div class="container">
+            <div class="card">
+                <div>
+                    <p>Se inscreva no Google! atualizações todo mês!</p>
+                    <input type="search" name="procurar" id="procurar" placeholder="seu email" disabled>
+                    <button disabled>Inscrever</button>
+                    <a href="">Arquivar</a>
+                </div>
+            </div>
+        </div>
+        <span>Copyright &copy; 1997-8 Stanford University</span>
+    </footer>
+    <!-- FIM DA ÁREA FOOTER-->
+</body>
+<script src="script.js"></script>
+
+</html>

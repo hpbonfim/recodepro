@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark side of the moon</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <p class="toggle-label">Modo noturno</p>
+            <div class="toggle">
+                <div class="switch"></div>
+            </div>
+        </header>
+
+        <img src="./images/sun.png" alt="loogle logo" class="invert" id="image" />
+        <br>
+            <div class="search-input">
+                <input type="text" placeholder="Buscar" id="palavra-chave" />
+                <button onclick="fazerPesquisa()">
+                    <img src="https://img.icons8.com/ios/344/google-web-search.png" alt="icone de busca"
+                        class="search-icon" />
+                </button>
+            </div>
+
+        <footer class="invert">
+           &copy; RecodePro - OpenSource
+        </footer>
+    </div>
+
+</body>
+<script src="./script.js"></script>
+
+</html>

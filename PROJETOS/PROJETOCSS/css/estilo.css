@@ -1,0 +1,149 @@
+/* -------------------------------------------------------------- */
+/* GLOBAL */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/*NAV BAR*/
+nav {
+    position: fixed;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: red;
+    font-weight: bolder;
+}
+
+nav ul {
+    text-align: center;
+}
+
+nav li {
+    margin-right: 10%;
+    display: inline-block;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 10px;
+    text-decoration: none;
+}
+
+nav li:hover {
+    color: white;
+    background-color: rgb(230, 82, 82);
+    text-decoration: none;
+}
+
+nav .logo {
+    width: 8%;
+    float: left;
+}
+
+/* FIM NAV BAR */
+
+/* MAIN*/
+main {
+    text-align: center;
+}
+
+.subtitulo {
+    text-shadow: 2px;
+}
+
+/*FIM MAIN*/
+
+
+/*FOOTER*/
+#formas_pagamento {
+    color: red;
+}
+
+#rodape {
+    text-align: center;
+}
+
+.preco {
+    color: red;
+}
+
+/* FIM FOOTER */
+
+
+/* -------------------------------------------------------------- */
+/* PRODUTOS HTML */
+
+
+
+/* GRID */
+.produtos-container {
+    display: grid;
+    grid-template-areas:
+        'menu produtos';
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+/*FIM GRID*/
+
+/* PRODUTOS*/
+.produtos {
+    display: flex;
+    flex-wrap: nowrap;
+    grid-area: produtos;
+}
+
+.produtos .box_produto {
+    background-color: #f1f1f1;
+    width: 100%;
+    margin: 10px;
+    text-align: center;
+    border-style: inset;
+    border-color: rgb(255, 30, 30);
+}
+
+.produtos .box_produto p em {
+    text-decoration: line-through;
+}
+
+.produtos .box_produto .preco {
+    font-weight: bold;
+}
+
+/*FIM PRODUTOS*/
+
+
+/* -------------------------------------------------------------- */
+/* LOJAS HTML */
+
+.loja-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.loja-container .info {
+    width: 80%;
+    text-align: center;
+}
+
+/* -------------------------------------------------------------- */
+/* CONTATOS HTML */
+
+.contato-container {
+    display: grid;
+    grid-template-areas:
+        ' esquerda direita '
+        ' centro centro ';
+    grid-gap: 10px;
+    justify-items: center;
+    text-align: center;
+}
+
+.item-esquerda { grid-area: esquerda; }
+.item-direita { grid-area: direita; }
+.item-centro { grid-area: centro; }

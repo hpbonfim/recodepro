@@ -1,0 +1,250 @@
+{
+    "produtos": {
+        "geladeiras": {
+            "quantidades": 4,
+            "geladeira": [
+                {
+                    "id": 0,
+                    "titulo": "",
+                    "subtitulo": "",
+                    "antigoPreco": "",
+                    "precoAtual": "",
+                    "detalhesProduto": "",
+                    "quantidadeProduto": 0
+                },
+                {
+                    "id": 1,
+                    "titulo": "",
+                    "subtitulo": "",
+                    "antigoPreco": "",
+                    "precoAtual": "",
+                    "detalhesProduto": "",
+                    "quantidadeProduto": 0
+                },
+                {
+                    "id": 2,
+                    "titulo": "",
+                    "subtitulo": "",
+                    "antigoPreco": "",
+                    "precoAtual": "",
+                    "detalhesProduto": "",
+                    "quantidadeProduto": 0
+                },
+                {
+                    "id": 3,
+                    "titulo": "",
+                    "subtitulo": "",
+                    "antigoPreco": "",
+                    "precoAtual": "",
+                    "detalhesProduto": "",
+                    "quantidadeProduto": 0
+                }
+            ]
+        },
+        "microondas": {
+            "quantidades": 4,
+            "microondas": [
+                {
+                    "id": 0,
+                    "titulo": "",
+                    "subtitulo": "",
+                    "antigoPreco": "",
+                    "precoAtual": "",
+                    "detalhesProduto": "",
+                    "quantidadeProduto": 0
+                },
+                {
+                    "id": 1,
+                    "titulo": "",
+                    "subtitulo": "",
+                    "antigoPreco": "",
+                    "precoAtual": "",
+                    "detalhesProduto": "",
+                    "quantidadeProduto": 0
+                },
+                {
+                    "id": 2,
+                    "titulo": "",
+                    "subtitulo": "",
+                    "antigoPreco": "",
+                    "precoAtual": "",
+                    "detalhesProduto": "",
+                    "quantidadeProduto": 0
+                },
+                {
+                    "id": 3,
+                    "titulo": "",
+                    "subtitulo": "",
+                    "antigoPreco": "",
+                    "precoAtual": "",
+                    "detalhesProduto": "",
+                    "quantidadeProduto": 0
+                }
+            ]
+        },
+        "fogoes": {
+            "quantidades": 4,
+            "fogao": [
+                {
+                    "id": 0,
+                    "titulo": "",
+                    "subtitulo": "",
+                    "antigoPreco": "",
+                    "precoAtual": "",
+                    "detalhesProduto": "",
+                    "quantidadeProduto": 0
+                },
+                {
+                    "id": 1,
+                    "titulo": "",
+                    "subtitulo": "",
+                    "antigoPreco": "",
+                    "precoAtual": "",
+                    "detalhesProduto": "",
+                    "quantidadeProduto": 0
+                },
+                {
+                    "id": 2,
+                    "titulo": "",
+                    "subtitulo": "",
+                    "antigoPreco": "",
+                    "precoAtual": "",
+                    "detalhesProduto": "",
+                    "quantidadeProduto": 0
+                },
+                {
+                    "id": 3,
+                    "titulo": "",
+                    "subtitulo": "",
+                    "antigoPreco": "",
+                    "precoAtual": "",
+                    "detalhesProduto": "",
+                    "quantidadeProduto": 0
+                }
+            ]
+        },
+        "lavadora-roupas": {
+            "quantidades": 4,
+            "lavadora-roupa": [
+                {
+                    "id": 0,
+                    "titulo": "",
+                    "subtitulo": "",
+                    "antigoPreco": "",
+                    "precoAtual": "",
+                    "detalhesProduto": "",
+                    "quantidadeProduto": 0
+                },
+                {
+                    "id": 1,
+                    "titulo": "",
+                    "subtitulo": "",
+                    "antigoPreco": "",
+                    "precoAtual": "",
+                    "detalhesProduto": "",
+                    "quantidadeProduto": 0
+                },
+                {
+                    "id": 2,
+                    "titulo": "",
+                    "subtitulo": "",
+                    "antigoPreco": "",
+                    "precoAtual": "",
+                    "detalhesProduto": "",
+                    "quantidadeProduto": 0
+                },
+                {
+                    "id": 3,
+                    "titulo": "",
+                    "subtitulo": "",
+                    "antigoPreco": "",
+                    "precoAtual": "",
+                    "detalhesProduto": "",
+                    "quantidadeProduto": 0
+                }
+            ]
+        },
+        "lava-loucas": {
+            "quantidades": 4,
+            "lava-louca": [
+                {
+                    "id": 0,
+                    "titulo": "",
+                    "subtitulo": "",
+                    "antigoPreco": "",
+                    "precoAtual": "",
+                    "detalhesProduto": "",
+                    "quantidadeProduto": 0
+                },
+                {
+                    "id": 1,
+                    "titulo": "",
+                    "subtitulo": "",
+                    "antigoPreco": "",
+                    "precoAtual": "",
+                    "detalhesProduto": "",
+                    "quantidadeProduto": 0
+                },
+                {
+                    "id": 2,
+                    "titulo": "",
+                    "subtitulo": "",
+                    "antigoPreco": "",
+                    "precoAtual": "",
+                    "detalhesProduto": "",
+                    "quantidadeProduto": 0
+                },
+                {
+                    "id": 3,
+                    "titulo": "",
+                    "subtitulo": "",
+                    "antigoPreco": "",
+                    "precoAtual": "",
+                    "detalhesProduto": "",
+                    "quantidadeProduto": 0
+                }
+            ]
+        },
+        "computadores": {
+            "quantidades": 4,
+            "computador": [
+                {
+                    "id": 0,
+                    "titulo": "",
+                    "subtitulo": "",
+                    "antigoPreco": "",
+                    "precoAtual": "",
+                    "detalhesProduto": "",
+                    "quantidadeProduto": 0
+                },
+                {
+                    "id": 1,
+                    "titulo": "",
+                    "subtitulo": "",
+                    "antigoPreco": "",
+                    "precoAtual": "",
+                    "detalhesProduto": "",
+                    "quantidadeProduto": 0
+                },
+                {
+                    "id": 2,
+                    "titulo": "",
+                    "subtitulo": "",
+                    "antigoPreco": "",
+                    "precoAtual": "",
+                    "detalhesProduto": "",
+                    "quantidadeProduto": 0
+                },
+                {
+                    "id": 3,
+                    "titulo": "",
+                    "subtitulo": "",
+                    "antigoPreco": "",
+                    "precoAtual": "",
+                    "detalhesProduto": "",
+                    "quantidadeProduto": 0
+                }
+            ]
+        }
+    }
+}

@@ -33,6 +33,7 @@ nav {
     width: 100%;
     background-color: #5a3795;
     font-weight: bolder;
+    z-index: 1;
 }
 
 nav ul {
@@ -112,11 +113,30 @@ ul {
     grid-template-columns: auto auto auto auto;
     grid-gap: 15px;
 }
-.produtos-container .categorias{
-    width: 90%;
+
+/* CATEGORIAS */
+.produtos-container .categorias {
+    width: 300px;
 }
-.produtos-container .lista-categorias {
-    padding-left: 0%;
+
+.produtos-container .categorias .lista-categorias {
+    padding: 0%;
+    margin: 0%;
+    width: 100%;
+}
+
+.produtos-container .categorias .lista-categorias ul {
+    width: 100%;
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.produtos-container .categorias .lista-categorias ul li {
+    -moz-transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+
 }
 
 /* BOX */
@@ -142,6 +162,7 @@ ul {
 .produtos-container .box_produto .preco {
     font-weight: bold;
 }
+
 
 /* BOTOES */
 

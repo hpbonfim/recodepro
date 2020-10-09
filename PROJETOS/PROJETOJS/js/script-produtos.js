@@ -54,6 +54,7 @@ filtrarCategoria = (itemId) => {
 /* FIM FILTRAR CATEGORIAS */
 
 
+
 let verDetalhes = (itemId) => {
     alert(itemId)
 }

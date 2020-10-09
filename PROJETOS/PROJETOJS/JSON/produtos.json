@@ -1,7 +1,7 @@
 {
     "produtos": {
         "Geladeiras": {
-            "quantidades": 4,
+            "quantidades": 2,
             "geladeira": [
                 {
                     "id": 0,
@@ -15,26 +15,6 @@
                 },
                 {
                     "id": 1,
-                    "titulo": "",
-                    "imageUrl": "",
-                    "subtitulo": "",
-                    "precoAtual": "",
-                    "antigoPreco": "",
-                    "detalhesProduto": "",
-                    "quantidadeProduto": 0
-                },
-                {
-                    "id": 2,
-                    "titulo": "",
-                    "imageUrl": "",
-                    "subtitulo": "",
-                    "precoAtual": "",
-                    "antigoPreco": "",
-                    "detalhesProduto": "",
-                    "quantidadeProduto": 0
-                },
-                {
-                    "id": 3,
                     "titulo": "",
                     "imageUrl": "",
                     "subtitulo": "",
@@ -91,7 +71,7 @@
             ]
         },
         "Fogões": {
-            "quantidades": 4,
+            "quantidades": 3,
             "fogao": [
                 {
                     "id": 0,
@@ -122,21 +102,11 @@
                     "antigoPreco": "",
                     "detalhesProduto": "",
                     "quantidadeProduto": 0
-                },
-                {
-                    "id": 3,
-                    "titulo": "",
-                    "imageUrl": "",
-                    "subtitulo": "",
-                    "precoAtual": "",
-                    "antigoPreco": "",
-                    "detalhesProduto": "",
-                    "quantidadeProduto": 0
                 }
             ]
         },
         "Lavadora de Roupas": {
-            "quantidades": 4,
+            "quantidades": 6,
             "lavadora-roupa": [
                 {
                     "id": 0,
@@ -170,6 +140,26 @@
                 },
                 {
                     "id": 3,
+                    "titulo": "",
+                    "imageUrl": "",
+                    "subtitulo": "",
+                    "precoAtual": "",
+                    "antigoPreco": "",
+                    "detalhesProduto": "",
+                    "quantidadeProduto": 0
+                },
+                {
+                    "id": 4,
+                    "titulo": "",
+                    "imageUrl": "",
+                    "subtitulo": "",
+                    "precoAtual": "",
+                    "antigoPreco": "",
+                    "detalhesProduto": "",
+                    "quantidadeProduto": 0
+                },
+                {
+                    "id": 5,
                     "titulo": "",
                     "imageUrl": "",
                     "subtitulo": "",
@@ -226,7 +216,7 @@
             ]
         },
         "Computadores": {
-            "quantidades": 4,
+            "quantidades": 8,
             "computador": [
                 {
                     "id": 0,
@@ -260,6 +250,46 @@
                 },
                 {
                     "id": 3,
+                    "titulo": "",
+                    "imageUrl": "",
+                    "subtitulo": "",
+                    "precoAtual": "",
+                    "antigoPreco": "",
+                    "detalhesProduto": "",
+                    "quantidadeProduto": 0
+                },
+                {
+                    "id": 4,
+                    "titulo": "",
+                    "imageUrl": "",
+                    "subtitulo": "",
+                    "precoAtual": "",
+                    "antigoPreco": "",
+                    "detalhesProduto": "",
+                    "quantidadeProduto": 0
+                },
+                {
+                    "id": 5,
+                    "titulo": "",
+                    "imageUrl": "",
+                    "subtitulo": "",
+                    "precoAtual": "",
+                    "antigoPreco": "",
+                    "detalhesProduto": "",
+                    "quantidadeProduto": 0
+                },
+                {
+                    "id": 6,
+                    "titulo": "",
+                    "imageUrl": "",
+                    "subtitulo": "",
+                    "precoAtual": "",
+                    "antigoPreco": "",
+                    "detalhesProduto": "",
+                    "quantidadeProduto": 0
+                },
+                {
+                    "id": 7,
                     "titulo": "",
                     "imageUrl": "",
                     "subtitulo": "",

@@ -6,6 +6,24 @@ body {
     margin: 0;
 }
 
+button {
+    width: 80%;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #a0a0a0;
+}
+
 /*NAV BAR*/
 nav {
     position: fixed;
@@ -13,7 +31,7 @@ nav {
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: red;
+    background-color: #5a3795;
     font-weight: bolder;
 }
 
@@ -24,6 +42,9 @@ nav ul {
 nav li {
     margin-right: 10%;
     display: inline-block;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    border-radius: 15px;
 }
 
 nav li a {
@@ -32,16 +53,17 @@ nav li a {
     text-align: center;
     padding: 14px 10px;
     text-decoration: none;
+
 }
 
 nav li:hover {
     color: white;
-    background-color: rgb(230, 82, 82);
+    background-color: #f48423;
     text-decoration: none;
 }
 
 nav .logo {
-    width: 8%;
+    width: 100px;
     float: left;
 }
 
@@ -50,6 +72,11 @@ nav .logo {
 /* MAIN*/
 main {
     text-align: center;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
 }
 
 .subtitulo {
@@ -61,7 +88,7 @@ main {
 
 /*FOOTER*/
 #formas_pagamento {
-    color: red;
+    color: rgb(0, 0, 0);
 }
 
 #rodape {
@@ -69,7 +96,8 @@ main {
 }
 
 .preco {
-    color: red;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
 }
 
 /* FIM FOOTER */
@@ -78,83 +106,73 @@ main {
 /* -------------------------------------------------------------- */
 /* PRODUTOS HTML */
 
-
-
 /* GRID */
 .produtos-container {
     display: grid;
-    grid-template-areas: 'menu produtos';
-    grid-gap: 10px;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 15px;
     padding: 10px;
 }
 
-/*FIM GRID*/
-
-/* PRODUTOS*/
-.produtos {
-    display: flex;
-    flex-wrap: nowrap;
-    grid-area: produtos;
+.produtos-container .lista-categorias {
+    padding-left: 0%;
 }
 
-.produtos .box_produto {
+/* BOX */
+.produtos-container .box_produto {
     background-color: #f1f1f1;
     width: 100%;
-    margin: 10px;
     text-align: center;
     border-style: inset;
-    border-color: rgb(255, 30, 30);
+    border-color: rgb(135, 175, 255);
 }
 
-.produtos .box_produto p em {
+.produtos-container .box_produto p em {
     text-decoration: line-through;
 }
 
-.produtos .box_produto .preco {
+.produtos-container .box_produto .preco {
     font-weight: bold;
 }
 
-.produtos button {
-    width: 80%;
-    border: none;
-    color: black;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
+/* BOTOES */
+
+.produtos-container .menu-botoes {
+    font-size: medium;
 }
 
-.produtos .detalhes-produto {
+.produtos-container .menu-botoes:hover {
+    background-color: #a0a0a0;
+}
+
+.produtos-container .detalhes-produto {
     background-color: white;
     border: 2px solid #555555;
 }
 
-.produtos .detalhes-produto:hover {
+.produtos-container .detalhes-produto:hover {
     background-color: #555555;
 }
 
-.produtos .adicionar-carrinho {
+.produtos-container .adicionar-carrinho {
     background-color: white;
     color: black;
     border: 2px solid #008CBA;
 }
 
-.produtos .adicionar-carrinho:hover {
+.produtos-container .adicionar-carrinho:hover {
     background-color: #008CBA;
 }
 
-.produtos .comprar-produto {
+.produtos-container .comprar-produto {
     background-color: white;
     border: 2px solid #4CAF50;
 }
 
-.produtos .comprar-produto:hover {
+.produtos-container .comprar-produto:hover {
     background-color: #4CAF50;
 }
+
 
 /*FIM PRODUTOS*/
 

@@ -2,7 +2,7 @@
     "produtos": {
         "Geladeiras": {
             "quantidades": 2,
-            "geladeira": [
+            "itens": [
                 {
                     "id": 0,
                     "titulo": "",
@@ -27,7 +27,7 @@
         },
         "Microondas": {
             "quantidades": 4,
-            "microondas": [
+            "itens": [
                 {
                     "id": 0,
                     "titulo": "",
@@ -72,7 +72,7 @@
         },
         "Fogões": {
             "quantidades": 3,
-            "fogao": [
+            "itens": [
                 {
                     "id": 0,
                     "titulo": "",
@@ -107,7 +107,7 @@
         },
         "Lavadora de Roupas": {
             "quantidades": 6,
-            "lavadora-roupa": [
+            "itens": [
                 {
                     "id": 0,
                     "titulo": "",
@@ -172,7 +172,7 @@
         },
         "Lava Louças": {
             "quantidades": 4,
-            "lava-louca": [
+            "itens": [
                 {
                     "id": 0,
                     "titulo": "",
@@ -217,7 +217,7 @@
         },
         "Computadores": {
             "quantidades": 8,
-            "computador": [
+            "itens": [
                 {
                     "id": 0,
                     "titulo": "",

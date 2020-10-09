@@ -8,7 +8,7 @@ fetch(URL_PRODUTOS)
         const { produtos } = data
         let listaCategoriasId = document.getElementById('lista-categorias')
 
-        Object.entries(produtos).map((todosProdutos, index) => {
+        Object.entries(produtos).map(todosProdutos => {
             return arrayObjetos.push(todosProdutos)
         })
 
@@ -24,9 +24,34 @@ fetch(URL_PRODUTOS)
 
 /* FILTRAR CATEGORIAS */
 filtrarCategoria = (itemId) => {
-    alert(itemId)
-    console.log(arrayObjetos[itemId][1])
+    /*REMOVE TODOS OS BOX DO PRODUTO ANTES DE FILTRAR*/
+    document.querySelectorAll('.box_produto').forEach(elemento => elemento.remove())
+
+    let sessaoProdutosId = document.getElementById("categorias")
+
+    arrayObjetos[itemId][1].itens.map(item => {
+        console.log(item.id)
+        sessaoProdutosId.insertAdjacentHTML('afterend', `
+        <div class="box_produto">
+            <img class="imagem_produto" src="${item.imageUrl}" alt="Geladeira brastemp">
+            <br>
+            <span>
+                ${item.titulo}
+            </span>
+            <hr>
+            <p class="descricao">
+                <em class="traco">${item.precoAntigo}</em>
+            <p class="preco">${item.precoAtual}</p>
+            <button onclick="verDetalhes(${item.id})" class="detalhes-produto">DETALHES</button>
+            <button onclick="carrinhoDeCompras(${item.id})" class="adicionar-carrinho">COLOCAR NO CARRINHO</button>
+            <button onclick="comprarProduto(${item.id})" class="comprar-produto">COMPRAR</button>
+            </p>
+        </div>
+        `
+        )
+    })
 }
+/* FIM FILTRAR CATEGORIAS */
 
 
 let verDetalhes = (itemId) => {

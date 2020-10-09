@@ -113,7 +113,9 @@ ul {
     grid-gap: 15px;
     padding: 10px;
 }
-
+.categorias{
+    width: 270px;
+}
 .produtos-container .lista-categorias {
     padding-left: 0%;
 }
@@ -121,10 +123,14 @@ ul {
 /* BOX */
 .produtos-container .box_produto {
     background-color: #f1f1f1;
-    width: 100%;
+    width: 300px;
     text-align: center;
     border-style: inset;
     border-color: rgb(135, 175, 255);
+}
+
+.produtos-container .box_produto .imagem_produto {
+    width: 150px;
 }
 
 .produtos-container .box_produto p em {

@@ -4,7 +4,10 @@ const detalhesProduto = JSON.parse(sessionStorage.getItem("detalhesProduto"))
 document.addEventListener("DOMContentLoaded", () => {
 
     /* FUNÇOES */
+    // tituloProduto
     // imagemProduto
+    // coletaniaImagensProduto
+    // visualizarImagemSelecionada // onclick
     // precoAtualProduto
     // precoAntigoProduto
     // descricaoProduto
@@ -26,7 +29,22 @@ document.addEventListener("DOMContentLoaded", () => {
         const imagemProduto = detalhesProduto.imagemProduto
         const novaImgTag = `<img src="${imagemProduto}" alt="${tituloProduto()}">`
 
-        imagemProdutoId.insertAdjacentHTML('afterbegin', novaImgTag)
+        imagemProdutoId.innerHTML = novaImgTag
+    }
+
+    const coletaniaImagensProduto = () => {
+        const coletaniaImagensProduto = document.getElementById("coletaniaImagens")
+        const coletaniaImagens = detalhesProduto.coletaniaImagensProduto
+        console.log(coletaniaImagens.length)
+    }
+
+    const visualizarImagemSelecionada = () => {
+        const imagemProdutoId = document.getElementById("imagemProduto")
+        const imagemProduto = detalhesProduto.imagemProduto
+        const novaImgTag = `<img src="${imagemProduto}" alt="${tituloProduto()}">`
+
+        imagemProdutoId.innerHTML = novaImgTag
+
     }
 
     const precoAtualProduto = () => {
@@ -87,6 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const executarFuncoes = () => {
         tituloProduto()
         imagemProduto()
+        coletaniaImagensProduto()
         precoAtualProduto()
         precoAntigoProduto()
         descricaoProduto()
@@ -94,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
         quantidadeProduto()
         calcularParcelas()
     }
-    
+
     /* EXECUTAR AO CARREGAR A PÁGINA */
     window.onload = executarFuncoes()
 

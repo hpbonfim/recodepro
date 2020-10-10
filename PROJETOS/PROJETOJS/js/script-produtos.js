@@ -3,13 +3,15 @@ const URL_PRODUTOS = "https://raw.githubusercontent.com/hpbonfim/recodepro/maste
 let arrayObjetos = new Array()
 
 /* FUNÇOES */
-let carregarListaCategorias
-let filtrarCategoria
-let mostrarTodosProdutos
-let listarObjetos
-let limparLista
-let verDetalhesProduto
+// carregarListaCategorias
+// filtrarCategoria
+// mostrarTodosProdutos
+// listarObjetos
+// limparLista
+// verDetalhesProduto
 /* ----- */
+
+
 
 /* ------------------------------ DOWNLOAD DADOS DO GITHUB ----------------------------- */
 /* TODO - CONSUMIR TUDO DE LOCALSTORAGE APÓS DOWNLOAD */
@@ -31,9 +33,10 @@ fetch(URL_PRODUTOS)
     })
 
 
+
 /* ------------------------------  LISTA DE CATEGORIAS ----------------------------- */
-carregarListaCategorias = () => {
-    let listaCategoriasId = document.getElementById('lista-categorias')
+const carregarListaCategorias = () => {
+    let listaCategoriasId = document.getElementById('listaCategorias')
     let quantidadeTotal = 0
 
     arrayObjetos.map((produto, index) => {
@@ -49,39 +52,45 @@ carregarListaCategorias = () => {
 
 
 /* ------------------------------  MOSTRAR TODAS AS CATEGORIAS ----------------------------- */
-mostrarTodosProdutos = () => {
+const mostrarTodosProdutos = () => {
     limparLista() // REMOVE TODOS OS BOX DO PRODUTO ANTES DE FILTRAR
     for (let i = 0; i < arrayObjetos.length; i++) { listarObjetos(i, i) }
 }
 
 
 /* ------------------------------  MOSTRAR TODAS AS CATEGORIAS ----------------------------- */
-filtrarCategoria = (categoriaProdutoId, itemId) => {
+const filtrarCategoria = (categoriaProdutoId, itemId) => {
     limparLista() // REMOVE TODOS OS BOX DO PRODUTO ANTES DE FILTRAR
     listarObjetos(categoriaProdutoId, itemId)
 }
 
 
 /* ------------------------------  FILTRAR CATEGORIAS ----------------------------- */
-listarObjetos = (categoriaProdutoId, itemId) => {
+const listarObjetos = (categoriaProdutoId, itemId) => {
     let categorias = document.getElementById("categorias")
     let array = arrayObjetos[itemId][1]
 
     array.itens.map(item => {
         categorias.insertAdjacentHTML('afterend', `
-        <div class="box_produto">
-            <img class="imagem_produto" src="${item.imagemProduto}" alt="Geladeira brastemp">
+        <div class="box-produto">
+            <br>
+            <img class="imagem-produto" src="${item.imagemProduto}" alt="Geladeira brastemp">
             <hr>
             <br>
-            <span>
-                ${item.titulo}
+            <span class="titulo-produto">
+                ${item.tituloProduto}
             </span>
             <p class="descricao">
-                <em class="traco">${item.precoAntigoProduto}</em>
-                <p class="preco">${item.precoAtualProduto}</p>
+                <em class="traco">De ${item.precoAntigoProduto}</em>
+                <br>
+                <br>
+                <span>Por apenas:
+                    <br>
+                    <strong class="preco-atual"> ${item.precoAtualProduto}</strong>
+                </span>
                 <button onclick="verDetalhesProduto(${categoriaProdutoId}, ${item.id})" class="detalhes-produto">DETALHES</button>
-                <button onclick="carrinhoDeCompras(${categoriaProdutoId}, ${item.id}})" class="adicionar-carrinho">COLOCAR NO CARRINHO</button>
-                <button onclick="comprarProduto(${categoriaProdutoId}, ${item.id}})" class="comprar-produto">COMPRAR</button>
+                <button onclick="carrinhoDeCompras(${categoriaProdutoId}, ${item.id})" class="adicionar-carrinho">COLOCAR NO CARRINHO</button>
+                <button onclick="comprarProduto(${categoriaProdutoId}, ${item.id})" class="comprar-produto">COMPRAR</button>
             </p>
         </div>
         `
@@ -91,16 +100,24 @@ listarObjetos = (categoriaProdutoId, itemId) => {
 
 
 /* ------------------------------  LIMPAR LISTA DE FILTRAGEM DOS PRODUTOS ----------------------------- */
-limparLista = () => {
-    return document.querySelectorAll('.box_produto').forEach(elemento => elemento.remove())
+const limparLista = () => {
+    return document.querySelectorAll('.box-produto').forEach(elemento => elemento.remove())
 }
 
 
 /* ------------------------------  REDIRECIONA PARA PÁGINA DETALHES  ----------------------------- */
-verDetalhesProduto = (categoriaProdutoId, itemId) => {
+const verDetalhesProduto = (categoriaProdutoId, itemId) => {
     let produtoSelecionado = arrayObjetos[categoriaProdutoId][1].itens[itemId]
 
     sessionStorage.setItem("detalhesProduto", JSON.stringify(produtoSelecionado)) // ARMAZENA O PRODUTO EM SESSÃO
 
-    window.location.href = "detalhe_produto.html"
+    window.location.href = "detalhe-produto.html"
+}
+
+const carrinhoDeCompras = (categoriaProdutoId, itemId) => {
+    alert("Funcionalidade em breve")
+}
+
+const comprarProduto = (categoriaProdutoId, itemId) => {
+    alert("Funcionalidade em breve")
 }

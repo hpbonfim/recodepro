@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Contato - Full Stack Eletro</title>
     <link rel="stylesheet" href="./css/estilo.css">
+
 </head>
 
 <body>
@@ -15,49 +16,48 @@
             <li> <a href="index.html"> Inicio </a> </li>
             <li> <a href="produtos.html"> Produtos </a> </li>
             <li> <a href="loja.html"> Nossas Lojas </a> </li>
-            <li> <a href="contato.html"> Contatos </a> </li>
+            <li> <a href="contato.html"> Fale Conosco </a> </li>
         </ul>
     </nav>
     <!-- FIM DO MENU -->
     <br><br><br><br>
 
     <!-- MAIN-->
-    <main>
-        <h2 class="titulo">
-            Nossos contatos
-        </h2>
-        <p class="subtitulo">Fique a vontade para nos contactar!</p>
+    <main >
+        <header>
+            <p class="titulo">
+                Contacte-nos
+            </p>
+            <p class="subtitulo">Fique a vontade para falar conosco!</p>
+            <hr>
+        </header>
     </main>
     <!-- MAIN-->
 
-    <hr>
 
     <!-- CONTEÚDO -->
     <div class="contato-container">
-        <div class="item-esquerda">
-            <p>
-                <img src="./images/o-email.png" alt="email" width="4%">
-                contato@fullstackeletro.com
-            </p>
-        </div>
+            <div>
+                <p>Nome</p>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome...">
+            </div>
 
-        <div class="item-direita">
-            <p>
-                <img src="./images/whatsapp.png" alt="Whatsapp" width="4%">
-                (11) 99999-9999
-            </p>
-        </div>
+            <div>
+                <p>Email</p>
+                <input type="email" id="email" name="email" placeholder="Digite seu email...">
+            </div>
 
-        <div class="item-centro">
-            <form>
-                <h4>Nome: </h4>
-                <input type="text" style="width: 400px;">
-                <h4>Mensagem: </h4>
-                <textarea style="width: 400px;"></textarea>
-                <br>
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
+            <div>
+                <p>Texto</p>
+                <textarea id="texto" name="texto" placeholder="Escreva algo..."></textarea>
+            </div>
+
+            <div>
+                <button class="enviar" onclick="alert('Em breve!')">Enviar</button>
+            </div>
+
+            <br>
+
     </div>
     <!-- FIM CONTEÚDO -->
 
@@ -65,12 +65,26 @@
 
     <!-- FOOTER -->
     <footer class="rodape">
+        <hr>
         <strong>
-            <p class="formas_pagamento"> Formas de Pagamento</p>
+            <p class="formas-pagamento"> Formas de Pagamento</p>
             <img src="./images/formas_de_pagamento.png" alt="Formas de pagamento">
-             <hr>
-<p> &copy; Fullstack Eletro </p>
+            <hr>
+            <div class="rodape-contato">
+                <span>
+                    <img src="./images/o-email.png" alt="email" width="4%">
+                    contato@fullstackeletro.com
+                </span>
+                <span>
+                    <img src="./images/whatsapp.png" alt="Whatsapp" width="4%">
+                    (01) 23456-7800
+                </span>
+            </div>
         </strong>
+        <hr>
+        <span> &copy; Fullstack Eletro </span>
+        <br>
+        <br>
     </footer>
     <!-- FIM FOOTER-->
 </body>

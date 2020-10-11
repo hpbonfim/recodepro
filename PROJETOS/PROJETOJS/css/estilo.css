@@ -1,5 +1,9 @@
 /* -------------------------------------------------------------- */
 /* GLOBAL */
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mali&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
 
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -7,12 +11,13 @@ body {
     padding: 0%;
     top: 0%;
     width: 100%;
+    background-image: url('../images/background.jpg');
 }
 
 /* BOTÕES */
 button {
     width: 80%;
-    border: none;
+    border: 1px solid black;
     color: black;
     padding: 10px 20px;
     text-align: center;
@@ -21,6 +26,10 @@ button {
     margin: 4px 2px;
     transition-duration: 0.3s;
     cursor: pointer;
+}
+
+img {
+    object-fit: contain;
 }
 
 .comprar-produto {
@@ -65,6 +74,7 @@ select:hover {
 
 /*NAV BAR*/
 nav {
+    font-family: 'Finger Paint', cursive;
     position: fixed;
     top: 0;
     margin: 0;
@@ -89,17 +99,23 @@ nav li {
 
 nav li a {
     display: block;
-    color: white;
+    color: black;
     text-align: center;
     padding: 14px 10px;
     text-decoration: none;
+    font-size: 20px;
+    text-shadow: 0 0 2px white;
 
 }
 
-nav li:hover {
-    color: white;
-    background-color: #f48423;
+nav li a:hover {
+    background-color: #c9c9c965;
+    text-shadow: 0 0 1px black;
+
     text-decoration: none;
+    transition: 0.3s;
+    color: white;
+
 }
 
 nav .logo {
@@ -119,9 +135,6 @@ ul {
     list-style-type: none;
 }
 
-.subtitulo {
-    text-shadow: 2px;
-}
 
 
 /* PRECO */
@@ -137,7 +150,46 @@ ul {
 /*FOOTER*/
 .rodape {
     text-align: center;
+    background-color: white;
+    font-family: 'Neucha', cursive;
+    font-size: 20px;
+    font-family: 'Mali', cursive;
 }
+.rodape .rodape-contato {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+	justify-content: space-around;
+
+} 
+
+.rodape .rodape-contato span img {
+    width: 15px;
+}
+
+/* TITULOS */
+header {
+    background-color: white;
+}
+
+.titulo {
+    font-family: 'Permanent Marker', cursive;
+    text-shadow: 1px 1px 20px white;
+
+    color: rgb(14, 12, 12);
+    font-size: 5vw;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+.subtitulo {
+    font-family: 'Neucha', cursive;
+    font-size: 40px;
+    text-shadow: 1px 1px 20px white;
+}
+
+
 
 /* -------------------------------------------------------------- */
 /* PÁGINA INICIAL HTML */
@@ -240,16 +292,17 @@ ul {
 
 /* BOX LISTA PRODUTOS */
 .produtos-container .box-produto {
-    background-color: transparent;
+    background-color: white;
     padding: 0%;
     margin: 0%;
     width: 95%;
+    
     text-align: center;
     border-style: inset;
     border-color: rgb(135, 175, 255);
 }
 
-.produtos-container  .box-produto .titulo-produto {
+.produtos-container .box-produto .titulo-produto {
     margin-left: 1%;
     margin-right: 1%;
 }
@@ -299,6 +352,7 @@ ul {
 .container-main {
     display: grid;
     grid-template-areas: 'coletania-imagens imagem detalhes';
+    background-color: white;
 }
 
 /* COLETANIA IMAGENS */
@@ -317,7 +371,20 @@ ul {
 
 .container-coletania-imagens img {
     width: 80px;
+    padding: 5px;
+    height: 80px;
     border: 1px dotted black;
+    object-fit: contain;
+
+}
+
+.container-coletania-imagens .button-coletania {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+
 }
 
 /* IMAGEM */
@@ -330,23 +397,30 @@ ul {
 .container-imagem img {
     min-width: 50%;
     min-width: 50%;
-    max-width: 500px;
-    max-width: 500px;
+    max-width: 400px;
+    max-width: 400px;
+    object-fit: contain;
 }
 
 /* DETALHES */
 .container-detalhes {
     grid-area: detalhes;
     grid-column: 3 / 3;
+    
+}
+
+.container-detalhes .titulo-produto {
+    font-family: 'Neucha', cursive;
+
 }
 
 .container-detalhes section {
-    width: 400px;
     margin-right: 5%;
     padding-bottom: 10px;
     float: right;
     background-color: #f1f1f1;
-    border: 1px dotted #333
+    border: 1px dotted #333;
+    width: 400px;
 }
 
 .container-detalhes section p {
@@ -357,9 +431,72 @@ ul {
 
 .descricao-produto {
     margin: 2%;
+    padding: 10px;
     text-align: left;
+    background-color: white;
 }
 
+
+.descricao-produto .avaliacoes .lado {
+    float: left;
+    width: 15%;
+    margin-top: 10px;
+}
+
+.descricao-produto .avaliacoes .meio {
+    margin-top: 10px;
+    float: left;
+    width: 70%;
+}
+
+.descricao-produto .avaliacoes .direito {
+    text-align: right;
+}
+
+.descricao-produto .avaliacoes .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* The progresso container */
+.descricao-produto .avaliacoes .progresso-container {
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    color: white;
+}
+
+/* Individual bars */
+.descricao-produto .avaliacoes .progresso-5 {
+    width: 60%;
+    height: 18px;
+    background-color: #4CAF50;
+}
+
+.descricao-produto .avaliacoes .progresso-4 {
+    width: 30%;
+    height: 18px;
+    background-color: #2196F3;
+}
+
+.descricao-produto .avaliacoes .progresso-3 {
+    width: 10%;
+    height: 18px;
+    background-color: #00bcd4;
+}
+
+.descricao-produto .avaliacoes .progresso-2 {
+    width: 4%;
+    height: 18px;
+    background-color: #ff9800;
+}
+
+.descricao-produto .avaliacoes .progresso-1 {
+    width: 15%;
+    height: 18px;
+    background-color: #f44336;
+}
 
 
 /* -------------------------------------------------------------- */
@@ -368,10 +505,13 @@ ul {
 .loja-container {
     display: grid;
     grid-template-columns: auto auto auto;
+    background-color: rgba(255, 255, 255, 0.7);
+    font-family: 'Neucha', cursive;
+    font-size: 20px;
 }
 
 .loja-container .info {
-    width: 80%;
+    width: 85%;
     text-align: center;
 }
 
@@ -379,23 +519,53 @@ ul {
 /* CONTATOS HTML */
 
 .contato-container {
-    display: grid;
-    grid-template-areas:
-        ' esquerda direita '
-        ' centro centro ';
     grid-gap: 10px;
-    justify-items: center;
     text-align: center;
+    font-size: 20px;
+    font-family: 'Neucha', cursive;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    width: 40%;
+    margin-left: 30%;
+    border: 1px dashed black;
+
+    
 }
 
-.item-esquerda {
-    grid-area: esquerda;
+
+.contato-container input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px 0 10px 10px;
+    width: 80%;
 }
 
-.item-direita {
-    grid-area: direita;
+.contato-container textarea {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 100px;
+    padding: 10px 0 10px 10px;
+    width: 80%;
+    resize: vertical
 }
 
-.item-centro {
-    grid-area: centro;
+
+.contato-container p {
+    padding-top: 15px;
+    margin: 1%;
+}
+
+
+.contato-container button {
+    background-color: #c7c7c7;
+    color: black;
+
+    cursor: pointer;
+    width: 80%;
+}
+
+.contato-container button:hover {
+    background-color: #45a049;
+    color: white;
+    border-radius: 4px;
 }

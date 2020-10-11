@@ -1,5 +1,18 @@
 const detalhesProduto = JSON.parse(sessionStorage.getItem("detalhesProduto"))
 
+/* FUNÇOES */
+// visualizarImagemSelecionada // onclick
+/* ----- */
+
+const visualizarImagemSelecionada = (coletaniaImagensImg, tituloProduto) => {
+    if (coletaniaImagensImg != null && coletaniaImagensImg != undefined) {
+        const imagemProdutoId = document.getElementById("imagemProduto")
+        const novaImgTag = `<img src="${coletaniaImagensImg}" alt="${tituloProduto}">`
+        imagemProdutoId.innerHTML = novaImgTag
+    }
+    return
+}
+
 /* EXECUTAR LISTA DE FUNÇÕES QUANDO O DOM TERMINAR DE CARREGAR */
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -7,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // tituloProduto
     // imagemProduto
     // coletaniaImagensProduto
-    // visualizarImagemSelecionada // onclick
     // precoAtualProduto
     // precoAntigoProduto
     // descricaoProduto
@@ -33,19 +45,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const coletaniaImagensProduto = () => {
-        const coletaniaImagensProduto = document.getElementById("coletaniaImagens")
+        const coletaniaImagensProdutoId = document.getElementById("coletaniaImagensProduto")
         const coletaniaImagens = detalhesProduto.coletaniaImagensProduto
-        console.log(coletaniaImagens.length)
+
+        for (let img = 0; img < coletaniaImagens.length; img++) {
+            let imagemUrl = coletaniaImagens[img]
+            let imgTag = `<li><button class="button-coletania" onclick="visualizarImagemSelecionada('${imagemUrl}','${tituloProduto()}')"><img src="${imagemUrl}" alt="${tituloProduto()}"></button></li>`
+            coletaniaImagensProdutoId.insertAdjacentHTML("afterbegin", imgTag)
+        }
     }
 
-    const visualizarImagemSelecionada = () => {
-        const imagemProdutoId = document.getElementById("imagemProduto")
-        const imagemProduto = detalhesProduto.imagemProduto
-        const novaImgTag = `<img src="${imagemProduto}" alt="${tituloProduto()}">`
 
-        imagemProdutoId.innerHTML = novaImgTag
 
-    }
+
 
     const precoAtualProduto = () => {
         const precoAtualProdutoId = document.getElementById("precoAtualProduto")
@@ -118,3 +130,4 @@ document.addEventListener("DOMContentLoaded", () => {
     window.onload = executarFuncoes()
 
 });
+

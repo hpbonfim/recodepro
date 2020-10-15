@@ -1,17 +1,5 @@
 version: "3.8"
 services:
-  portainer-ce:
-    image: portainer/portainer-ce:latest
-    container_name: portainer-ce
-    restart: always
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - portainer_data:/data
-    ports:
-      - 9000:9000
-    networks:
-      - intranet
-
   mysql:
     image: mysql:5.7
     container_name: mysql

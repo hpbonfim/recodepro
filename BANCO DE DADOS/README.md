@@ -21,8 +21,8 @@
     <li><b><code>docker-compose down </code></b></li>
     <li><b><code>docker rmi -f $(docker images -aq) </code></b></li>
     <li><b><code>docker rm - f $(docker ps -aq) </code></b></li>
-    <li><b><code>docker volume prune -y </code></b></li>
-    <li><b><code>docker system prune -y </code></b></li>
+    <li><b><code>docker volume prune -f </code></b></li>
+    <li><b><code>docker system prune -f </code></b></li>
 </ol>
 <hr>
 <h2> 4. Utilização</h2>
